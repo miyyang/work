@@ -1,0 +1,85 @@
+mysql> SOURCE ./EXP2.SQL
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 5 rows affected (0.00 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
++---------+-------+-------+
+| licence | owner | model |
++---------+-------+-------+
+| C011    | P1    | M1    |
+| C012    | P3    | M1    |
+| C013    | P4    | M3    |
+| C014    | P4    | M2    |
+| C015    | P5    | M3    |
++---------+-------+-------+
+5 rows in set (0.00 sec)
+
++---------+-------+-------+
+| licence | owner | model |
++---------+-------+-------+
+| M011    | P2    | M7    |
+| M012    | P3    | M8    |
+| M013    | P4    | M7    |
+| M014    | P4    | M8    |
++---------+-------+-------+
+4 rows in set (0.00 sec)
+
++-------+
+| owner |
++-------+
+| P1    |
+| P5    |
++-------+
+2 rows in set (0.00 sec)
+
++-------+
+| owner |
++-------+
+| P3    |
+| P4    |
++-------+
+2 rows in set (0.00 sec)
+
++-------+---------+
+| owner | CAR_NUM |
++-------+---------+
+| P1    |       1 |
+| P3    |       1 |
+| P4    |       2 |
+| P5    |       1 |
++-------+---------+
+4 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
++-------+--------------+---------------------+
+| owner | numberOfCars | numberOfMotorcycles |
++-------+--------------+---------------------+
+| P1    |            1 |                   0 |
+| P2    |            0 |                   1 |
+| P3    |            1 |                   1 |
+| P4    |            2 |                   2 |
+| P5    |            1 |                   0 |
++-------+--------------+---------------------+
+5 rows in set (0.00 sec)
+
+mysql> 

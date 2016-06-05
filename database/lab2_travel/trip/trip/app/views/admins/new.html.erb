@@ -1,0 +1,9 @@
+<div class="admins new">
+<%= link_to("<< Back to List", {:action =>'manage'}, :class => 'back') %>
+<h2>Create Admin User</h2>
+<%= form_for(:admins, :url => {:action => 'create'}) do |f| %>
+<%= render(:partial => "form", :locals => {:f => f }) %>
+	<div class="form-buttons"> 
+	</div>
+<% end %>
+</div>

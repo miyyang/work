@@ -1,0 +1,1 @@
+mysql -uroot -pxingzuan2

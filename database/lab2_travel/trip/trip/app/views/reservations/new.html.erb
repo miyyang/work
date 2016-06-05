@@ -1,0 +1,9 @@
+<div class="reservations new">
+<%= link_to("<< Back to List", {:controller => 'admins', :action =>'manage'}, :class => 'back') %>
+<h2>Create Reservations</h2>
+<%= form_for(:reservations, :url => {:action => 'create'}) do |f| %>
+<%= render(:partial => "form", :locals => {:f => f }) %>
+	<div class="form-buttons"> 
+	</div>
+<% end %>
+</div>
