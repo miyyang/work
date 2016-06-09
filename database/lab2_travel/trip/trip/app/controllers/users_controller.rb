@@ -73,6 +73,13 @@ class UsersController < ApplicationController
     @hotel = Hotel.where(:location => params[:arivcity]).first
     @reservations = Reservation.find_by_sql("select * from reservations where custid = '#{@user.id}'")
   end
+  
+  def check_path
+    @user = User.find(params[:user_id])
+    @startnode = params[:fromcity]
+    @endnode = params[:arivcity]
+    @userfli = Flight.find_by_sql("select * from flights where id in (select resvkey from reservations where custid = '#{@user.id}' and resvtype = 1)")
+  end
 
   def search
     @user = User.find(params[:user_id])

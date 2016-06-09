@@ -24,6 +24,9 @@ Hotel.create([{location: 'shenzhen', price: 800, numrooms: 70, numavail: 70}])
 Flight.create([{flightnum: 'CA001', price: 1000, numseats: 50, numavail: 49, fromcity: 'guangzhou', arivcity: 'beijing'}])
 Flight.create([{flightnum: 'CA002', price: 1000, numseats: 50, numavail: 50, fromcity: 'shanghai', arivcity: 'guangzhou'}])
 Flight.create([{flightnum: 'CA003', price: 1000, numseats: 50, numavail: 50, fromcity: 'shenzhen', arivcity: 'guangzhou'}])
+Flight.create([{flightnum: 'CA004', price: 1000, numseats: 50, numavail: 50, fromcity: 'beijing', arivcity: 'wuhan'}])
+Flight.create([{flightnum: 'CA005', price: 1000, numseats: 50, numavail: 50, fromcity: 'wuhan', arivcity: 'beijing'}])
+Flight.create([{flightnum: 'CA006', price: 1000, numseats: 50, numavail: 50, fromcity: 'shanxi', arivcity: 'shenzhen'}])
 
 #1为预订航班，2为预订宾馆房间，3为预订出租车
 Reservation.create([{custid: 1, resvtype: 1, resvkey: 1}])

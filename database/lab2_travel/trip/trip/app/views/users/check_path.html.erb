@@ -1,0 +1,40 @@
+<%= link_to 'back', {:controller => 'users', :action => 'manage', :id => @user.id} %>
+
+<% count = 0 %>
+<% queue = [] %>
+<% queue.push(@startnode) %>
+<% while(queue.size != 0) %>
+	counting: <%= count%>
+	<% if count == 10 %>
+		<% result = false %>
+		<% break %>
+	<% end %>
+	<% now = queue.shift %>
+	<% if now == @endnode %>
+		<% result = true %>
+		<% break %>
+	<% end %>
+	<% @userfli.each do |ch| %>
+		<% if ch.fromcity == now %>
+			<%= ch.fromcity %>...<%= ch.arivcity %>
+			<% if ch.arivcity == @endnode %>
+				<% result = true %>
+				<% break %>
+			<% end %>
+			<% queue.push(ch.arivcity) %>
+		<% end %>
+	<% end %>
+	<% count = count + 1 %>
+<% end %>
+
+<h1> validate path completeness: </h1>
+	<% if result == true %>
+		<h1>True</h1>
+	<% else %>
+		<h1>False</h1>
+	<% end %>
+		
+
+<br>
+<h1>____________________________________________________________________________</h1>
+<br>

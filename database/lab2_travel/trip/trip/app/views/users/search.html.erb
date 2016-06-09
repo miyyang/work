@@ -8,8 +8,20 @@
 	<label for="arivcity">Arivcity:</label><br>
 	<%= text_field_tag :arivcity, params[:arivcity] %><br>
 	
-	<%= submit_tag "check"%>
+	<%= submit_tag "check two points"%>
 <% end %>
+
+<%= form_tag(:controller => "users", :action => "check_path", :user_id => @user.id) do %>
+	
+	<label for="fromcity">Fromcity:</label><br>
+	<%= text_field_tag :fromcity, params[:fromcity] %><br>
+	
+	<label for="arivcity">Arivcity:</label><br>
+	<%= text_field_tag :arivcity, params[:arivcity] %><br>
+	
+	<%= submit_tag "check path completeness"%>
+<% end %>
+
 
 <br>
 <h1>your reservation</h1>
