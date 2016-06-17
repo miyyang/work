@@ -338,10 +338,6 @@ public class CCacheSim extends JFrame implements ActionListener {
                 String path = fileChooser.getSelectedFile().getAbsolutePath();
                 fileAddrBtn.setText(path);
                 file = new File(path);
-
-				   	/*
-						fix the setting
-					*/
                 now_cacheType = cacheType;
                 now_csIndex = csIndex;
                 now_icsIndex = icsIndex;
