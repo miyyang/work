@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D73EF98A-55C7-4C67-A856-AF96B99F6736</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Snooping</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E8942A840A2FD9352243F32F8F1AF6A7344037E3</key>
+		<string>github.com:miyyang/work.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>computer architecture/lab5/lab5/Snooping.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E8942A840A2FD9352243F32F8F1AF6A7344037E3</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:miyyang/work.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E8942A840A2FD9352243F32F8F1AF6A7344037E3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E8942A840A2FD9352243F32F8F1AF6A7344037E3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>work</string>
+		</dict>
+	</array>
+</dict>
+</plist>
