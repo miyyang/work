@@ -1,9 +1,0 @@
-<div class="users new">
-<%= link_to("<< Back to List", {:action =>'login'}, :class => 'back') %>
-<h2>User Signup</h2>
-<%= form_for(:users, :url => {:action => 'create'}) do |f| %>
-<%= render(:partial => "form", :locals => {:f => f }) %>
-	<div class="form-buttons"> 
-	</div>
-<% end %>
-</div>

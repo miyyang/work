@@ -1,0 +1,119 @@
+<%= link_to 'back', {:controller => 'users', :action => 'manage', :id => @user.id} %>
+<br>
+<%= form_tag(:controller => "users", :action => "check", :user_id => @user.id) do %>
+	
+	<label for="fromcity">Fromcity:</label><br>
+	<%= text_field_tag :fromcity, params[:fromcity] %><br>
+	
+	<label for="arivcity">Arivcity:</label><br>
+	<%= text_field_tag :arivcity, params[:arivcity] %><br>
+	
+	<%= submit_tag "check two points"%>
+<% end %>
+
+<%= form_tag(:controller => "users", :action => "check_path", :user_id => @user.id) do %>
+	
+	<label for="fromcity">Fromcity:</label><br>
+	<%= text_field_tag :fromcity, params[:fromcity] %><br>
+	
+	<label for="arivcity">Arivcity:</label><br>
+	<%= text_field_tag :arivcity, params[:arivcity] %><br>
+	
+	<%= submit_tag "check path completeness"%>
+<% end %>
+
+
+<br>
+<h1>your reservation</h1>
+
+<% @reservations.group_by{|s| s.resvtype}.each do |type, key| %>
+	<% if type == 1 %>
+        		<h2>flight reservation</h2>
+        		<div class="table-a">
+        		<table>
+				  <thead>
+				    <tr>
+				      <th>Flightnum</th>
+				      <th>Price</th>
+				      <th>numseats</th>
+				      <th>numavail</th>
+				      <th>Fromcity</th>
+				      <th>Arivcity</th>
+				      <th>Option</th>
+				      <th colspan="7"></th>
+				    </tr>
+				  </thead>
+				  <tbody>
+					<% key.each do |k| %>
+						<% flight = Flight.find(Reservation.find(k).resvkey) %>
+				      <tr>
+				        <td><%= flight.flightnum %></td>
+				        <td><%= flight.price %></td>
+				        <td><%= flight.numseats %></td>
+				        <td><%= flight.numavail %></td>
+				        <td><%= flight.fromcity %></td>
+				        <td><%= flight.arivcity %></td>
+				        <td><%= link_to 'unbook', {:controller => 'flights', :action => 'unbook', :res_id => k, :id => @user.id, :from => 1} %></td>
+				      </tr>
+				    <% end %>
+				  </tbody>
+				</table>
+				</div>
+        	<% elsif type == 2 %>
+        		<h2>hotel reservation</h2>
+        		<div class="table-a">
+        		<table>
+				  <thead>
+				    <tr>
+				      <th>Location</th>
+				      <th>Price</th>
+				      <th>Numcars</th>
+				      <th>Numavails</th>
+				      <th>Option</th>
+				      <th colspan="7"></th>
+				    </tr>
+				  </thead>
+				  <tbody>
+					<% key.each do |k| %>
+						<% hotel = Hotel.find(Reservation.find(k).resvkey) %>
+				      <tr>
+				        <td><%= hotel.location %></td>
+				        <td><%= hotel.price %></td>
+				        <td><%= hotel.numrooms %></td>
+				        <td><%= hotel.numavail %></td>
+				        <td><%= link_to 'unbook', {:controller => 'hotels', :action => 'unbook', :res_id => k, :id => @user.id, :from => 1} %></td>
+				      </tr>
+				    <% end %>
+				  </tbody>
+				</table>	
+				</div>
+        	<% elsif type == 3 %>
+        		<h2>car reservation</h2>
+        		<div class="table-a">
+        		<table>
+				  <thead>
+				    <tr>
+				      <th>Location</th>
+				      <th>Price</th>
+				      <th>Numcars</th>
+				      <th>Numavails</th>
+				      <th>Option</th>
+				      <th colspan="7"></th>
+				    </tr>
+				  </thead>
+				  <tbody>
+					<% key.each do |k| %>
+						<% car = Car.find(Reservation.find(k).resvkey) %>
+				      <tr>
+				        <td><%= car.location %></td>
+				        <td><%= car.price %></td>
+				        <td><%= car.numcars %></td>
+				        <td><%= car.numavail %></td>
+				        <td><%= link_to 'unbook', {:controller => 'cars', :action => 'unbook', :res_id => k, :id => @user.id, :from => 1} %></td>
+				      </tr>
+				    <% end %>
+				  </tbody>
+				</table>
+				</div>
+        	<% end %>
+<% end %>

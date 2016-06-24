@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  flightnum: MyString
+  price: 1
+  numseats: 1
+  numavail: 1
+  fromcity: MyString
+  arivcity: MyString
+
+two:
+  flightnum: MyString
+  price: 1
+  numseats: 1
+  numavail: 1
+  fromcity: MyString
+  arivcity: MyString
